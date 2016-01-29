@@ -1,0 +1,35 @@
+{
+  "name": "first_api",
+  "version": "1.0.0",
+  "description": "my first mongo backed rest api",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cameron4us/rest_api.git"
+  },
+  "author": "Cameron Forras",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cameron4us/rest_api/issues"
+  },
+  "homepage": "https://github.com/cameron4us/rest_api#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "chai-http": "^1.0.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.1.1",
+    "gulp-mocha": "^2.2.0",
+    "mocha": "^2.3.4"
+  },
+  "dependencies": {
+    "bcrypt": "^0.8.5",
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4",
+    "jsonwebtoken": "^5.5.4",
+    "mongoose": "^4.3.6"
+  }
+}
