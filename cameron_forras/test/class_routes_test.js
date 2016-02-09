@@ -1,3 +1,4 @@
+'use strict';
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 chai.use(chaiHttp);
@@ -27,11 +28,11 @@ describe('the classes api', () => {
   it('should create a class with a POST', (done) => {
     chai.request('localhost:3000')
       .post('/api/classes')
-      .send({name: 'test class', level: '101', professor: 'Bob'})
+      .send({name: 'test class'})
       .end(function(err, res) {
         expect(err).to.eql(null);
         expect(res).to.have.status(200);
-        expect(res.body.name).to.eql('test class', '101', 'Bob');
+        expect(res.body.name).to.eql('test class');
         expect(res.body).to.have.property('_id');
         done();
       });

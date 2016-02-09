@@ -1,3 +1,4 @@
+'use strict';
 const express = require('express');
 const jsonParser = require('body-parser').json();
 const Class = require(__dirname + '/../models/class');
@@ -26,6 +27,15 @@ classRouter.get('/myclasses', jwtAuth, (req, res) => {
 classRouter.post('/myclasses', jwtAuth, jsonParser, (req, res) => {
   var newClass = new Class(req.body);
   newClass.name = req.user._id;
+  newClass.save((err, data) => {
+    if (err) return handleDBError(err, res);
+
+    res.status(200).json(data);
+  });
+});
+
+classRouter.post('/classes', jsonParser, (req, res) => {
+  var newClass = new Class(req.body);
   newClass.save((err, data) => {
     if (err) return handleDBError(err, res);
 

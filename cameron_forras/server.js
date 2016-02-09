@@ -1,3 +1,4 @@
+'use strict';
 const express = require('express');
 const app = module.exports = exports = express();
 const mongoose = require('mongoose');

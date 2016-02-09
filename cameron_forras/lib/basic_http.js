@@ -1,3 +1,4 @@
+'use strict';
 const zeroBuffer = require(__dirname + '/zero_buffer');
 
 module.exports = exports = function(req, res, next) {

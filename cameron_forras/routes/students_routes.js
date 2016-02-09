@@ -1,3 +1,4 @@
+'use strict';
 const express = require('express');
 const jsonParser = require('body-parser').json();
 const Student = require(__dirname + '/../models/student');
